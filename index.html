@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!--
+  =============================================
+  MÉTODO IMPULSIONAR — Landing Page
+  Projeto de estudo: HTML estrutural com classes CSS
+  =============================================
+  
+  ESTRUTURA DO ARQUIVO:
+  1. <head>       → configurações, fontes, metadados
+  2. <header>     → navegação
+  3. <main>       → conteúdo principal (todas as seções)
+  4. <footer>     → rodapé
+  
+  CONVENÇÃO DE CLASSES:
+  Usamos a metodologia BEM simplificada:
+  .section-hero         → componente/seção
+  .hero__headline       → elemento dentro da seção (__)
+  .btn--primary         → variação/modificador (--)
+-->
+
+<head>
+  <!-- Define o conjunto de caracteres (suporte a acentos em português) -->
+  <meta charset="UTF-8" />
+
+  <!-- Faz a página se adaptar ao tamanho da tela do celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título que aparece na aba do navegador -->
+  <title>Método Impulsionar | Mentoria para Empreendedores</title>
+
+  <!-- 
+    GOOGLE FONTS
+    Importamos duas famílias tipográficas:
+    - DM Serif Display → headlines (personalidade, autoridade)
+    - DM Sans         → corpo de texto (leitura limpa)
+    Sempre carregar fontes no <head> para evitar "flash" de fonte genérica
+  -->
+   <link rel="stylesheet" href="style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+</style>
+ </head>
+
+<body>
+  <!-- ============================================
+       HEADER
+       O <header> é um elemento semântico: diz ao navegador
+       que este bloco é o cabeçalho da página.
+       ============================================ -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+
+        <!-- Logo: âncora que leva ao topo da página -->
+        <a href="#" class="header__logo">
+          Método <span>Impulsionar</span>
+        </a>
+
+        <!-- Navegação principal -->
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#sobre" class="nav__link">Sobre</a>
+          <a href="#como-funciona" class="nav__link">Como funciona</a>
+          <a href="#planos" class="nav__link">Planos</a>
+          <a href="#faq" class="nav__link">FAQ</a>
+        </nav>
+
+        <!-- CTA do header (oculto no mobile via media query pode ser adicionado depois) -->
+        <a href="#planos" class="btn btn--primary">Quero participar</a>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ============================================
+       MAIN
+       O <main> envolve o conteúdo principal da página.
+       Só deve existir um <main> por página.
+       ============================================ -->
+  <main>
+
+    <!-- ==================
+         HERO
+         ================== -->
+    <section class="section-hero">
+      <div class="container">
+        <div class="hero__content">
+
+          <!-- Badge acima da headline -->
+          <div class="hero__badge">
+            ✦ Turma com vagas limitadas · 2025
+          </div>
+
+          <!-- Headline principal -->
+          <h1 class="hero__headline">
+            Você construiu um negócio.<br>
+            Agora construa <em>uma empresa.</em>
+          </h1>
+
+          <!-- Subtítulo explicativo -->
+          <p class="hero__description">
+            O Método Impulsionar é uma mentoria em grupo para empreendedores que
+            já faturam, mas ainda dependem de tudo. Em 6 meses, você deixa de
+            ser o gargalo e começa a escalar de verdade.
+          </p>
+
+          <!-- Botões de ação -->
+          <div class="hero__cta">
+            <a href="#planos" class="btn btn--primary">Conhecer os planos</a>
+            <a href="#sobre" class="btn btn--ghost">Saber mais ↓</a>
+          </div>
+
+          <!-- Prova social abaixo dos botões -->
+          <div class="hero__social-proof">
+
+            <!-- Avatares com iniciais dos alunos -->
+            <div class="hero__avatars">
+              <div class="hero__avatar">MR</div>
+              <div class="hero__avatar">PS</div>
+              <div class="hero__avatar">CL</div>
+              <div class="hero__avatar">TB</div>
+            </div>
+
+            <div class="hero__divider"></div>
+
+            <!-- Texto de prova social -->
+            <p class="hero__proof-text">
+              <strong>+312 empreendedores</strong> já transformaram seus negócios
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================
+         PROBLEMA (3 dores)
+         ================== -->
+    <section class="section section--alt" id="sobre">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Você se identifica?</span>
+          <h2 class="section-title">Reconhece alguma dessas situações?</h2>
+          <p class="section-subtitle">
+            Se você chegou até aqui, provavelmente está vivendo uma dessas realidades:
+          </p>
+        </div>
+
+        <!-- Grid com 3 cards de dor -->
+        <div class="pain-grid">
+
+          <div class="pain-card">
+            <div class="pain-card__number">01</div>
+            <h3 class="pain-card__title">Você é o negócio</h3>
+            <p class="pain-card__text">
+              Se você parar, tudo para. Cada decisão, cada cliente, cada problema
+              passa por você. Tirar férias é uma ideia distante.
+            </p>
+          </div>
+
+          <div class="pain-card">
+            <div class="pain-card__number">02</div>
+            <h3 class="pain-card__title">Faturamento sem margem</h3>
+            <p class="pain-card__text">
+              O número cresce, mas o bolso não sente. Os custos escalam junto,
+              a equipe consome energia, e o lucro real some entre as despesas.
+            </p>
+          </div>
+
+          <div class="pain-card">
+            <div class="pain-card__number">03</div>
+            <h3 class="pain-card__title">Crescer parece perigoso</h3>
+            <p class="pain-card__text">
+              Cada novo cliente gera mais pressão. Contratar dá medo de errar.
+              Você sabe que precisa mudar, mas não sabe por onde começar.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================
+         SOLUÇÃO
+         ================== -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+
+        <div class="solution-grid">
+
+          <!-- Coluna de texto (esquerda) -->
+          <div>
+            <p class="solution__label">A solução</p>
+            <h2 class="solution__title">
+              Uma mentoria que funciona como um sócio estratégico
+            </h2>
+            <p class="solution__text">
+              Não é mais um curso gravado. O Método Impulsionar é um acompanhamento
+              de 6 meses com sessões ao vivo semanais, revisão do seu negócio e acesso
+              direto ao Rafael Duarte — que já passou exatamente pelo que você está vivendo.
+            </p>
+            <a href="#planos" class="btn btn--primary">Ver os planos</a>
+          </div>
+
+          <!-- Coluna de features (direita) -->
+          <div class="feature-list">
+
+            <div class="feature-item">
+              <div class="feature-item__icon">📍</div>
+              <div>
+                <p class="feature-item__title">Sessões ao vivo semanais</p>
+                <p class="feature-item__text">
+                  Encontros em grupo toda semana para resolver os desafios reais do seu negócio.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-item__icon">📋</div>
+              <div>
+                <p class="feature-item__title">Diagnóstico do seu negócio</p>
+                <p class="feature-item__text">
+                  Na entrada, mapeamos onde estão os gargalos e construímos um plano personalizado.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-item__icon">💬</div>
+              <div>
+                <p class="feature-item__title">Grupo privado de apoio</p>
+                <p class="feature-item__text">
+                  Acesso a uma comunidade de empreendedores no mesmo nível que você.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-item__icon">🎯</div>
+              <div>
+                <p class="feature-item__title">Biblioteca de frameworks</p>
+                <p class="feature-item__text">
+                  Templates, planilhas e ferramentas prontas para aplicar no seu negócio.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================
+         SOBRE O MENTOR
+         ================== -->
+    <section class="section section--alt">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Quem vai te mentorar</span>
+          <h2 class="section-title">Rafael Duarte</h2>
+        </div>
+
+        <div class="mentor-card">
+
+          <!-- Foto placeholder (aqui entraria uma <img> real) -->
+          <div class="mentor-card__photo">
+            👤
+          </div>
+
+          <!-- Informações do mentor -->
+          <div>
+            <h3 class="mentor-card__name">Rafael Duarte</h3>
+            <p class="mentor-card__role">Fundador do Método Impulsionar</p>
+            <p class="mentor-card__bio">
+              Construiu e vendeu uma agência de marketing digital com 28 colaboradores.
+              Depois disso, passou 5 anos ajudando empreendedores a fazer o mesmo:
+              construir negócios que funcionam sem eles no centro de tudo.
+              <br><br>
+              Não ensina teoria. Ensina o que testou, errou e refinou na prática.
+            </p>
+
+            <!-- Métricas de credibilidade -->
+            <div class="mentor-stats">
+              <div>
+                <span class="mentor-stat__number">312+</span>
+                <span class="mentor-stat__label">Alunos formados</span>
+              </div>
+              <div>
+                <span class="mentor-stat__number">R$47M</span>
+                <span class="mentor-stat__label">Gerados pelos alunos</span>
+              </div>
+              <div>
+                <span class="mentor-stat__number">5 anos</span>
+                <span class="mentor-stat__label">De mentoria ativa</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================
+         DEPOIMENTOS
+         ================== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Resultados reais</span>
+          <h2 class="section-title">O que os alunos dizem</h2>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <!-- Depoimento 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">
+              Em 3 meses, consegui contratar meu primeiro gerente e tirar férias pela
+              primeira vez em 4 anos. O método me deu clareza do que eu precisava mudar.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">MR</div>
+              <div>
+                <p class="testimonial-card__name">Marcelo Ribeiro</p>
+                <p class="testimonial-card__role">Dono de agência — São Paulo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">
+              Entrei faturando R$28k/mês. Saí com R$72k e uma equipe que funciona
+              sem precisar de mim em cada decisão. O investimento se pagou no segundo mês.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">PS</div>
+              <div>
+                <p class="testimonial-card__name">Patricia Souza</p>
+                <p class="testimonial-card__role">Consultora de RH — Curitiba</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">
+              O Rafael não vende sonho. Ele senta com você, olha para o seu negócio
+              e aponta o que precisa mudar. É incômodo às vezes — e necessário.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">CL</div>
+              <div>
+                <p class="testimonial-card__name">Carlos Lemos</p>
+                <p class="testimonial-card__role">E-commerce — Belo Horizonte</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================
+         PRICING
+         ================== -->
+    <section class="section section--alt" id="planos">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Investimento</span>
+          <h2 class="section-title">Escolha o plano ideal para você</h2>
+          <p class="section-subtitle">
+            Todos os planos incluem 6 meses de acompanhamento e acesso ao grupo privado.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Plano 1: Essencial -->
+          <div class="pricing-card">
+            <p class="pricing-card__name">Essencial</p>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__value">497</span>
+              <span class="pricing-card__period">/mês</span>
+            </div>
+            <p class="pricing-card__description">
+              Para começar a estruturar seu negócio com clareza e direção.
+            </p>
+
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Sessões semanais em grupo
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Diagnóstico inicial do negócio
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Acesso à biblioteca de frameworks
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Grupo privado no WhatsApp
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn--ghost btn--full">Começar agora</a>
+          </div>
+
+
+          <!-- Plano 2: Aceleração (destaque) -->
+          <div class="pricing-card pricing-card--featured">
+
+            <!-- Badge de mais popular -->
+            <div class="pricing-card__badge">Mais popular</div>
+
+            <p class="pricing-card__name">Aceleração</p>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__value">897</span>
+              <span class="pricing-card__period">/mês</span>
+            </div>
+            <p class="pricing-card__description">
+              Acompanhamento mais próximo para quem quer resultados mais rápidos.
+            </p>
+
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Tudo do plano Essencial
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                2 sessões individuais por mês
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Revisão mensal do plano estratégico
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Acesso ao canal direto com o Rafael
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn--primary btn--full">Quero o Aceleração</a>
+          </div>
+
+
+          <!-- Plano 3: Elite -->
+          <div class="pricing-card">
+            <p class="pricing-card__name">Elite</p>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__value">1.497</span>
+              <span class="pricing-card__period">/mês</span>
+            </div>
+            <p class="pricing-card__description">
+              Para quem quer acesso direto e um parceiro estratégico no dia a dia.
+            </p>
+
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Tudo do plano Aceleração
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Sessão de imersão individual mensal
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Revisão de negócio detalhada
+              </li>
+              <li class="pricing-feature">
+                <span class="pricing-feature__check">✓</span>
+                Prioridade nas vagas das próximas turmas
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn--ghost btn--full">Quero o Elite</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================
+         FAQ
+         ================== -->
+    <section class="section" id="faq">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Dúvidas frequentes</span>
+          <h2 class="section-title">Perguntas que você pode ter</h2>
+        </div>
+
+        <!-- 
+          <details> + <summary>: elemento nativo do HTML para acordeão.
+          Sem JavaScript. O navegador cuida da abertura e fechamento.
+        -->
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>
+              Para quem é o Método Impulsionar?
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <div class="faq-item__answer">
+              Para empreendedores que já faturam entre R$15k e R$80k/mês e estão
+              presos no operacional. Se você ainda está na fase de sobrevivência,
+              recomendamos esperar um pouco antes de entrar.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Como funcionam as sessões ao vivo?
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <div class="faq-item__answer">
+              As sessões acontecem toda semana via Zoom, com duração de 90 minutos.
+              O formato é: 30 minutos de conteúdo estratégico + 60 minutos de
+              hot seat, onde os alunos trazem seus desafios reais para resolver ao vivo.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              E se eu não puder participar de uma sessão ao vivo?
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <div class="faq-item__answer">
+              Todas as sessões são gravadas e ficam disponíveis por 30 dias após cada
+              encontro. Recomendamos participar ao vivo sempre que possível — mas
+              entendemos que a agenda do empreendedor é imprevisível.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Qual o prazo de duração da mentoria?
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <div class="faq-item__answer">
+              A mentoria tem duração de 6 meses. Esse é o tempo que consideramos
+              necessário para implementar as mudanças estruturais no negócio e
+              começar a ver resultados consistentes.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Existe garantia?
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <div class="faq-item__answer">
+              Oferecemos 15 dias de garantia incondicional. Se você participar das
+              duas primeiras semanas e sentir que não é para você, devolvemos
+              100% do valor investido — sem perguntas.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================
+         CTA FINAL
+         ================== -->
+    <section class="cta-final">
+      <div class="container">
+        <div class="cta-final__content">
+          <h2 class="cta-final__title">
+            Pronto para construir um negócio que funciona sem você?
+          </h2>
+          <p class="cta-final__subtitle">
+            As vagas para a próxima turma são limitadas.
+            Escolha seu plano e garanta sua entrada.
+          </p>
+          <a href="#planos" class="btn btn--primary">Garantir minha vaga</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================
+       FOOTER
+       O <footer> é um elemento semântico para o rodapé.
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+
+      <!-- Grid principal do footer -->
+      <div class="footer__grid">
+
+        <!-- Coluna da marca -->
+        <div class="footer__brand">
+          <p class="footer__logo">Método <span>Impulsionar</span></p>
+          <p class="footer__tagline">
+            Mentoria para empreendedores que querem construir
+            empresas — não apenas negócios.
+          </p>
+        </div>
+
+        <!-- Coluna: Mentoria -->
+        <div>
+          <p class="footer__col-title">Mentoria</p>
+          <ul class="footer__links">
+            <li><a href="#sobre" class="footer__link">Sobre o método</a></li>
+            <li><a href="#como-funciona" class="footer__link">Como funciona</a></li>
+            <li><a href="#planos" class="footer__link">Planos</a></li>
+            <li><a href="#faq" class="footer__link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna: Rafael Duarte -->
+        <div>
+          <p class="footer__col-title">Rafael Duarte</p>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Instagram</a></li>
+            <li><a href="#" class="footer__link">LinkedIn</a></li>
+            <li><a href="#" class="footer__link">YouTube</a></li>
+            <li><a href="#" class="footer__link">Podcast</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna: Legal -->
+        <div>
+          <p class="footer__col-title">Legal</p>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Termos de uso</a></li>
+            <li><a href="#" class="footer__link">Privacidade</a></li>
+            <li><a href="#" class="footer__link">Reembolso</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Linha do copyright -->
+      <div class="footer__bottom">
+        <p>© 2025 Método Impulsionar. Todos os direitos reservados.</p>
+        <p>Feito com propósito — não com hype.</p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
