@@ -1,42 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<!--
-  =============================================
-  MÉTODO IMPULSIONAR — Landing Page
-  Projeto de estudo: HTML estrutural com classes CSS
-  =============================================
-  
-  ESTRUTURA DO ARQUIVO:
-  1. <head>       → configurações, fontes, metadados
-  2. <header>     → navegação
-  3. <main>       → conteúdo principal (todas as seções)
-  4. <footer>     → rodapé
-  
-  CONVENÇÃO DE CLASSES:
-  Usamos a metodologia BEM simplificada:
-  .section-hero         → componente/seção
-  .hero__headline       → elemento dentro da seção (__)
-  .btn--primary         → variação/modificador (--)
--->
-
 <head>
-  <!-- Define o conjunto de caracteres (suporte a acentos em português) -->
   <meta charset="UTF-8" />
-
-  <!-- Faz a página se adaptar ao tamanho da tela do celular -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Título que aparece na aba do navegador -->
   <title>Método Impulsionar | Mentoria para Empreendedores</title>
-
-  <!-- 
-    GOOGLE FONTS
-    Importamos duas famílias tipográficas:
-    - DM Serif Display → headlines (personalidade, autoridade)
-    - DM Sans         → corpo de texto (leitura limpa)
-    Sempre carregar fontes no <head> para evitar "flash" de fonte genérica
-  -->
    <link rel="stylesheet" href="style.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
@@ -44,15 +11,9 @@
  </head>
 
 <body>
-  <!-- ============================================
-       HEADER
-       O <header> é um elemento semântico: diz ao navegador
-       que este bloco é o cabeçalho da página.
-       ============================================ -->
   <header class="header">
     <div class="container">
       <div class="header__inner">
-
         <!-- Logo: âncora que leva ao topo da página -->
         <a href="#" class="header__logo">
           Método <span>Impulsionar</span>
@@ -65,32 +26,19 @@
           <a href="#planos" class="nav__link">Planos</a>
           <a href="#faq" class="nav__link">FAQ</a>
         </nav>
-
-        <!-- CTA do header (oculto no mobile via media query pode ser adicionado depois) -->
-        <a href="#planos" class="btn btn--primary">Quero participar</a>
+        <a href="#planos" class="btn btn-primário">Quero participar</a>
 
       </div>
     </div>
   </header>
-
-
-  <!-- ============================================
-       MAIN
-       O <main> envolve o conteúdo principal da página.
-       Só deve existir um <main> por página.
-       ============================================ -->
   <main>
-
-    <!-- ==================
-         HERO
-         ================== -->
     <section class="section-hero">
       <div class="container">
         <div class="hero__content">
 
           <!-- Badge acima da headline -->
           <div class="hero__badge">
-            ✦ Turma com vagas limitadas · 2025
+            ✦ Turma com vagas limitadas · 2026
           </div>
 
           <!-- Headline principal -->
@@ -105,8 +53,6 @@
             já faturam, mas ainda dependem de tudo. Em 6 meses, você deixa de
             ser o gargalo e começa a escalar de verdade.
           </p>
-
-          <!-- Botões de ação -->
           <div class="hero__cta">
             <a href="#planos" class="btn btn--primary">Conhecer os planos</a>
             <a href="#sobre" class="btn btn--ghost">Saber mais ↓</a>
@@ -129,17 +75,10 @@
             <p class="hero__proof-text">
               <strong>+312 empreendedores</strong> já transformaram seus negócios
             </p>
-
           </div>
-
         </div>
       </div>
     </section>
-
-
-    <!-- ==================
-         PROBLEMA (3 dores)
-         ================== -->
     <section class="section section--alt" id="sobre">
       <div class="container">
 
@@ -176,25 +115,17 @@
             <div class="pain-card__number">03</div>
             <h3 class="pain-card__title">Crescer parece perigoso</h3>
             <p class="pain-card__text">
-              Cada novo cliente gera mais pressão. Contratar dá medo de errar.
+              Cada novo cliente gera mais pressão, contratar dá medo de errar.
               Você sabe que precisa mudar, mas não sabe por onde começar.
             </p>
           </div>
-
         </div>
       </div>
     </section>
-
-
-    <!-- ==================
-         SOLUÇÃO
-         ================== -->
     <section class="section" id="como-funciona">
       <div class="container">
 
         <div class="solution-grid">
-
-          <!-- Coluna de texto (esquerda) -->
           <div>
             <p class="solution__label">A solução</p>
             <h2 class="solution__title">
@@ -203,12 +134,10 @@
             <p class="solution__text">
               Não é mais um curso gravado. O Método Impulsionar é um acompanhamento
               de 6 meses com sessões ao vivo semanais, revisão do seu negócio e acesso
-              direto ao Rafael Duarte — que já passou exatamente pelo que você está vivendo.
+              direto ao Rafael Duarte, que já passou exatamente pelo que você está vivendo.
             </p>
             <a href="#planos" class="btn btn--primary">Ver os planos</a>
           </div>
-
-          <!-- Coluna de features (direita) -->
           <div class="feature-list">
 
             <div class="feature-item">
@@ -250,17 +179,10 @@
                 </p>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
-
-
-    <!-- ==================
-         SOBRE O MENTOR
-         ================== -->
     <section class="section section--alt">
       <div class="container">
 
@@ -273,7 +195,7 @@
 
           <!-- Foto placeholder (aqui entraria uma <img> real) -->
           <div class="mentor-card__photo">
-            👤
+            <img src="img.rafael.png" alt="imagem do mentor Rafael Duarte">
           </div>
 
           <!-- Informações do mentor -->
@@ -287,8 +209,6 @@
               <br><br>
               Não ensina teoria. Ensina o que testou, errou e refinou na prática.
             </p>
-
-            <!-- Métricas de credibilidade -->
             <div class="mentor-stats">
               <div>
                 <span class="mentor-stat__number">312+</span>
@@ -360,12 +280,12 @@
             <div class="testimonial-card__quote">"</div>
             <p class="testimonial-card__text">
               O Rafael não vende sonho. Ele senta com você, olha para o seu negócio
-              e aponta o que precisa mudar. É incômodo às vezes — e necessário.
+              e aponta o que precisa mudar. É incômodo às vezes, mas necessário.
             </p>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">CL</div>
               <div>
-                <p class="testimonial-card__name">Carlos Lemos</p>
+                <p class="testimonial-card__name">Carla Lemos</p>
                 <p class="testimonial-card__role">E-commerce — Belo Horizonte</p>
               </div>
             </div>
@@ -425,9 +345,6 @@
 
             <a href="#" class="btn btn--ghost btn--full">Começar agora</a>
           </div>
-
-
-          <!-- Plano 2: Aceleração (destaque) -->
           <div class="pricing-card pricing-card--featured">
 
             <!-- Badge de mais popular -->
@@ -504,10 +421,6 @@
       </div>
     </section>
 
-
-    <!-- ==================
-         FAQ
-         ================== -->
     <section class="section" id="faq">
       <div class="container">
 
@@ -516,10 +429,6 @@
           <h2 class="section-title">Perguntas que você pode ter</h2>
         </div>
 
-        <!-- 
-          <details> + <summary>: elemento nativo do HTML para acordeão.
-          Sem JavaScript. O navegador cuida da abertura e fechamento.
-        -->
         <div class="faq-list">
 
           <details class="faq-item">
@@ -585,11 +494,6 @@
         </div>
       </div>
     </section>
-
-
-    <!-- ==================
-         CTA FINAL
-         ================== -->
     <section class="cta-final">
       <div class="container">
         <div class="cta-final__content">
@@ -606,19 +510,9 @@
     </section>
 
   </main>
-
-
-  <!-- ============================================
-       FOOTER
-       O <footer> é um elemento semântico para o rodapé.
-       ============================================ -->
   <footer class="footer">
     <div class="container">
-
-      <!-- Grid principal do footer -->
       <div class="footer__grid">
-
-        <!-- Coluna da marca -->
         <div class="footer__brand">
           <p class="footer__logo">Método <span>Impulsionar</span></p>
           <p class="footer__tagline">
@@ -626,8 +520,6 @@
             empresas — não apenas negócios.
           </p>
         </div>
-
-        <!-- Coluna: Mentoria -->
         <div>
           <p class="footer__col-title">Mentoria</p>
           <ul class="footer__links">
@@ -638,7 +530,6 @@
           </ul>
         </div>
 
-        <!-- Coluna: Rafael Duarte -->
         <div>
           <p class="footer__col-title">Rafael Duarte</p>
           <ul class="footer__links">
@@ -648,8 +539,6 @@
             <li><a href="#" class="footer__link">Podcast</a></li>
           </ul>
         </div>
-
-        <!-- Coluna: Legal -->
         <div>
           <p class="footer__col-title">Legal</p>
           <ul class="footer__links">
@@ -660,11 +549,8 @@
         </div>
 
       </div>
-
-      <!-- Linha do copyright -->
       <div class="footer__bottom">
-        <p>© 2025 Método Impulsionar. Todos os direitos reservados.</p>
-        <p>Feito com propósito — não com hype.</p>
+        <p>© 2026 Método Impulsionar. Todos os direitos reservados.</p>
       </div>
 
     </div>
